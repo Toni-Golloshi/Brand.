@@ -8,22 +8,27 @@ var carouselImages = [
         id: 1,
         title: 'Title 1',
         description: 'Decription 1',
-        imgPath: 'https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=746&q=80'
+        imgPath: 'img/carousel01_1.jpg'
     }, {
         id: 2,
         title: 'Title 2',
         description: 'Decription 2',
-        imgPath: 'https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=746&q=80'
+        imgPath: 'img/carousel01_2.jpg'
     }, {
         id: 3,
         title: 'Title 3',
         description: 'Decription 3',
-        imgPath: 'https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=746&q=80'
+        imgPath: 'img/carousel01_3.jpg'
     }, {
         id: 4,
         title: 'Title 4',
         description: 'Decription 4',
-        imgPath: 'https://images.unsplash.com/photo-1574015974293-817f0ebebb74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=746&q=80'
+        imgPath: 'img/carousel01_4.jpg'
+    }, {
+        id: 5,
+        title: 'Title 5',
+        description: 'Decription 4',
+        imgPath: 'img/carousel01_5.jpg'
     }
 ];
 
@@ -46,6 +51,8 @@ function mouseOut(e) {
 addEventListeners();
 
 
+/** Nav list. Make list elements active by adding/removing a class */
+
 for (var i = 0; i < navList.length; i++) {
     // eslint-disable-next-line func-names
     navList[i].addEventListener('click', function () {
@@ -55,6 +62,8 @@ for (var i = 0; i < navList.length; i++) {
     });
 }
 
+/** jQuery used to get elements from the array and adding them to css as divs.
+ * Second part of it is to make the carousel library work. */
 
 // eslint-disable-next-line func-names
 $(document).ready(function () {
@@ -68,7 +77,6 @@ $(document).ready(function () {
     $('.carousel').slick({
         centerMode: true,
         dots: true,
-        /* Just changed this to get the bottom dots navigation */
         infinite: true,
         autoplay: true,
         speed: 200,
