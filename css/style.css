@@ -1,0 +1,294 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    box-sizing: border-box;
+    color: #777;
+}
+
+.paragraph {
+    font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.heading-primary {
+    color: #fff;
+    margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 7rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+}
+
+.heading-primary--main--black {
+    color: #000;
+}
+
+.heading-four {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.heading-four--white {
+    color: #fff;
+}
+
+.heading-four--gray {
+    color: #5F5F5F;
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 8rem !important;
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: 4rem !important;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 1.5rem !important;
+}
+
+.u-margin-top-big {
+    margin-top: 8rem !important;
+}
+
+.u-margin-bottom-bigger {
+    margin-bottom: 14rem !important;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+    text-decoration: none;
+    margin-top: 2px;
+    padding: 1.1rem 3rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+
+.btn--black {
+    background-color: #000;
+    color: #fff !important;
+}
+
+.btn--blue::after {
+    background-color: #000;
+}
+
+.btn--empty {
+    border-color: #000;
+    border-width: thin;
+    border-style: solid;
+    color: #000 !important;
+}
+
+.btn--empty::after {
+    background-color: transparent;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-text:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(0px);
+}
+
+.links,
+.links:link,
+.links:visited {
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+    font-size: 6rem;
+    color: #526acf;
+    cursor: pointer;
+}
+
+.links:hover {
+    text-decoration: underline;
+}
+
+.link-icon {
+    color: #526acf;
+    position: relative;
+    transform: translateX(-6.6rem);
+}
+
+.link-icon--1 {
+    font-size: 4rem;
+    padding-right: 2rem;
+}
+
+.link-icon--2 {
+    padding-left: 2rem;
+    font-size: 3rem;
+}
+
+.link-icon--3 {
+    padding-left: 2rem;
+    font-size: 2rem;
+}
+
+.heading-tertiary {
+    text-decoration: none;
+    color: #526acf;
+    line-height: 5rem;
+    font-size: 4rem;
+    display: block;
+    text-align: left;
+}
+
+.heading-tertiary__small {
+    font-size: 2rem;
+}
+
+.navlist {
+    list-style-type: none;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 10rem;
+    overflow: hidden;
+    font-size: 1.6rem;
+}
+
+.navlist__el {
+    padding: 2rem 1rem;
+    border-top: 4px solid transparent;
+}
+
+.navlist__el--right {
+    float: right;
+}
+
+.navlist__el--left {
+    float: left;
+    transform: translate(-2rem, -0.3rem);
+}
+
+.navlist__el a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-active {
+    transition: border-color 0.2s ease-in-out;
+    border-top: 4px solid #000;
+}
+
+.header {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(-2.5rem);
+}
+
+.header-bg,
+.header-svg-wrap{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:auto;
+}
+
+.header-hitbox {
+    position: absolute;
+    height: 60%;
+    width: 80%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 8rem;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row [class^="col-"] {
+    float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+    margin-right: 6rem;
+}
+
+.row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+}
+
+.section-carousel {
+    height: 90vh;
+    background-color: #3c3c3c;
+}
+
+.sizephoto {
+    height: 100%;
+}
+
+.sizephoto__photo1 {
+    width: 70%;
+    transform: translateY(-12%);
+}
+
+.sizephoto__car {
+    margin: auto;
+    width: 90%;
+}
